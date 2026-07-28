@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="JTSolutions" constructor="JTSCountryLookup" version="1.0.13" display-name-key="Control_DisplayName" description-key="Control_Description" control-type="standard">
+    <external-service-usage enabled="false">
+    </external-service-usage>
+
+    <property name="countryValue" display-name-key="CountryValue_DisplayName" description-key="CountryValue_Description" of-type="SingleLine.Text" usage="bound" required="true" />
+
+    <property name="languageCode" display-name-key="LanguageCode_DisplayName" description-key="LanguageCode_Description" of-type="SingleLine.Text" usage="input" required="false" default-value="en" />
+
+    <property name="useUserLanguage" display-name-key="UseUserLanguage_DisplayName" description-key="UseUserLanguage_Description" of-type="TwoOptions" usage="input" required="false" default-value="0">
+      <value name="false" display-name-key="Common_No">0</value>
+      <value name="true" display-name-key="Common_Yes">1</value>
+    </property>
+
+    <!-- Enum .raw at runtime is the numeric code as a string ("1"/"2"), not the "name" attribute
+         below - that's purely the label shown in the form designer's dropdown for this property.
+         1 = Name, 2 = IsoCode; see ValueFormat/parseValueFormat in countries.ts. -->
+    <property name="valueFormat" display-name-key="ValueFormat_DisplayName" description-key="ValueFormat_Description" of-type="Enum" usage="input" required="false" default-value="1">
+      <value name="Name" display-name-key="ValueFormat_Name">1</value>
+      <value name="IsoCode" display-name-key="ValueFormat_IsoCode">2</value>
+    </property>
+
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/CountryLookup.css" order="1" />
+      <resx path="strings/JTSCountryLookup.1033.resx" version="1.0.0" />
+      <resx path="strings/JTSCountryLookup.1034.resx" version="1.0.0" />
+    </resources>
+  </control>
+</manifest>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Control_DisplayName" xml:space="preserve">
+    <value>Country Lookup</value>
+  </data>
+  <data name="Control_Description" xml:space="preserve">
+    <value>Turns a plain text column into a searchable country picker - no Dataverse table, plugin, or external service required.</value>
+  </data>
+  <data name="CountryValue_DisplayName" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CountryValue_Description" xml:space="preserve">
+    <value>Single line text column that stores the selected country.</value>
+  </data>
+  <data name="LanguageCode_DisplayName" xml:space="preserve">
+    <value>Language code</value>
+  </data>
+  <data name="LanguageCode_Description" xml:space="preserve">
+    <value>ISO 639-1 language code used to display and search country names, e.g. en, es, fr, de. Leave blank to use en.</value>
+  </data>
+  <data name="UseUserLanguage_DisplayName" xml:space="preserve">
+    <value>Use user's language</value>
+  </data>
+  <data name="UseUserLanguage_Description" xml:space="preserve">
+    <value>When enabled, the list is displayed and searched in the current user's own language, while the stored value still uses Language code. When disabled, both display and storage use Language code.</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ValueFormat_DisplayName" xml:space="preserve">
+    <value>Stored value format</value>
+  </data>
+  <data name="ValueFormat_Description" xml:space="preserve">
+    <value>Whether picking a country stores its full localized name or its ISO 3166-1 alpha-2 code in the bound column.</value>
+  </data>
+  <data name="ValueFormat_Name" xml:space="preserve">
+    <value>Country name</value>
+  </data>
+  <data name="ValueFormat_IsoCode" xml:space="preserve">
+    <value>ISO code</value>
+  </data>
+  <data name="UI_CountriesHeader" xml:space="preserve">
+    <value>Countries</value>
+  </data>
+  <data name="UI_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="UI_SearchCountries" xml:space="preserve">
+    <value>Search countries</value>
+  </data>
+  <data name="UI_SearchPlaceholder" xml:space="preserve">
+    <value>Search...</value>
+  </data>
+  <data name="UI_EmptyPlaceholder" xml:space="preserve">
+    <value>---</value>
+  </data>
+  <data name="UI_NoResults" xml:space="preserve">
+    <value>No countries found</value>
+  </data>
+  <data name="UI_ErrorPrefix" xml:space="preserve">
+    <value>Country lookup error</value>
+  </data>
+</root>

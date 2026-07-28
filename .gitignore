@@ -1,0 +1,9 @@
+.secrets/*
+!.secrets/*.example
+node_modules/
+obj/
+bin/
+out/
+_export/
+generated/
+.claude/

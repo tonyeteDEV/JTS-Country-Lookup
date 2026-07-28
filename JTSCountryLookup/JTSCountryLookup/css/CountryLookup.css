@@ -1,0 +1,129 @@
+.jts-country-lookup {
+    font-family: var(--fontFamilyBase);
+    color: var(--colorNeutralForeground1);
+}
+
+.jts-country-lookup__combobox {
+    width: 100%;
+    min-width: 0;
+}
+
+.jts-country-lookup--selected {
+    position: relative;
+}
+
+/* Keeps the selected-value chip visually unchanged while Fluent uses this same-sized, transparent
+   control as the positioning and keyboard anchor for the portal-rendered listbox. */
+.jts-country-lookup__popup-anchor {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Fluent renders the listbox in a portal, so the class is assigned through the Combobox listbox
+   slot. The height fits the header plus six 32px options and their standard Fluent spacing. */
+.jts-country-lookup__listbox {
+    max-height: 244px;
+    overflow-y: auto;
+}
+
+.jts-country-lookup__listbox .fui-Option {
+    flex: 0 0 32px;
+    height: 32px;
+    box-sizing: border-box;
+}
+
+.jts-country-lookup__listbox .fui-OptionGroup__label {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    flex: 0 0 32px;
+    height: 32px;
+    box-sizing: border-box;
+    background-color: var(--colorNeutralBackground1, #ffffff);
+    border-bottom: 1px solid var(--colorNeutralStroke2, #e0e0e0);
+}
+
+.jts-country-lookup__option-icon {
+    flex: 0 0 auto;
+    margin-right: 8px;
+    color: var(--colorNeutralForeground3);
+    vertical-align: text-bottom;
+}
+
+/* Read-only "chip" view shown when a country is selected and not being edited - styled to match
+   this form's native fields at rest (flat gray fill box) and a native Lookup's populated value
+   (small icon + link-styled name + inline clear), rather than a plain text combobox. */
+.jts-country-lookup__chip-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+    height: 32px;
+    padding: 0 6px 0 0;
+    box-sizing: border-box;
+    background-color: var(--colorNeutralBackground3);
+    border: var(--strokeWidthThin) solid var(--colorTransparentStroke);
+    border-radius: var(--borderRadiusMedium);
+    cursor: default;
+    font-family: var(--fontFamilyBase);
+    font-size: var(--fontSizeBase300);
+}
+
+.jts-country-lookup__chip-row[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.jts-country-lookup__chip-row[data-open="true"] {
+    outline: 2px solid var(--colorCompoundBrandStroke, #0f6cbd);
+    outline-offset: -2px;
+}
+
+/* The selected value itself renders as a distinct light-blue pill (icon + name + inline clear),
+   not just plain text sitting on the row's own gray background - matching a native Lookup's
+   populated-value chip (e.g. "Parent Account"). */
+.jts-country-lookup__chip-pill {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+    max-width: 100%;
+    height: 100%;
+    padding: 0 4px 0 8px;
+    box-sizing: border-box;
+    background-color: var(--colorBrandBackground2);
+    border-radius: var(--borderRadiusMedium);
+}
+
+.jts-country-lookup__chip-icon {
+    flex: 0 0 auto;
+    color: var(--colorBrandForeground1);
+}
+
+.jts-country-lookup__chip-text {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--colorBrandForegroundLink);
+    text-decoration: underline;
+}
+
+.jts-country-lookup__chip-clear {
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+.jts-country-lookup__chip-search {
+    flex: 0 0 auto;
+    min-width: 0;
+    color: var(--colorNeutralForeground3);
+}
