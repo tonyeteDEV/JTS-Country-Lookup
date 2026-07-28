@@ -1,6 +1,6 @@
 {
   "name": "jts-country-lookup",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "PCF control that turns a plain text column into a searchable country picker, with no Dataverse table or plugin dependency.",
   "license": "MIT",
   "private": true,

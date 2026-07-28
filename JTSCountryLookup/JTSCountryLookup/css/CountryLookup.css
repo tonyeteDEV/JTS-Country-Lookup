@@ -61,12 +61,15 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 6px;
     width: 100%;
     min-width: 0;
     height: 32px;
-    padding: 0 6px 0 0;
+    /* Right padding reserves the search button's own footprint (24px) plus its 6px inset below,
+       so the chip-pill's max-width never extends underneath it - the button is taken out of flex
+       flow entirely (position: absolute) and pinned to the row's right edge, so it stays flush
+       with the end of the field regardless of how wide the selected country's chip is, instead of
+       merely trailing right after it. */
+    padding: 0 34px 0 0;
     box-sizing: border-box;
     background-color: var(--colorNeutralBackground3);
     border: var(--strokeWidthThin) solid var(--colorTransparentStroke);
@@ -123,7 +126,9 @@
 }
 
 .jts-country-lookup__chip-search {
-    flex: 0 0 auto;
-    min-width: 0;
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
     color: var(--colorNeutralForeground3);
 }
